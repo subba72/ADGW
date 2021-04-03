@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="ADGW.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Groceries Managemet</title>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" href="#">Grocessaary Management</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                   <li class="nav-item active">
+                    <a class="nav-link" href="#">Categort <span class="sr-only">(current)</span></a>
+                  </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Item insert <span class="sr-only">(current)</span></a>
+                  </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">View Item stock <span class="sr-only">(current)</span></a>
+                  </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Custome Purshce <span class="sr-only">(current)</span></a>
+                  </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">Inactive Customer <span class="sr-only">(current)</span></a>
+                  </li>
+              </div>
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <p>
+                allright resserverd
+            </p>
+        </footer>
+    </form>
+</body>
+</html>
