@@ -26,10 +26,10 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="Home.aspx">Home <span class="sr-only">(current)</span></a>
                   </li>
                    <li class="nav-item active">
-                    <a class="nav-link" href="#">Categort <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="WebForm2.aspx">Categort <span class="sr-only">(current)</span></a>
                   </li>
                     <li class="nav-item active">
                     <a class="nav-link" href="#">Item insert <span class="sr-only">(current)</span></a>
