@@ -40,7 +40,7 @@
 			        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon" ></span>
                   </button>
-
+                <br />
 			        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 				        <ul class="navbar-nav m-auto">
 					        <li class="nav-item active ">
@@ -80,6 +80,16 @@
                                     view
 						        </asp:LinkButton>
 					        </li>
+                            <li class="nav-item active">
+						       <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server">
+                                    Sign Up
+						        </asp:LinkButton>
+					        </li>
+                            <li class="nav-item active">
+						       <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server">
+                                    Login
+						        </asp:LinkButton>
+					        </li>
 					        <li class="nav-item active">
 						       <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server">
                                     Logout
@@ -87,7 +97,7 @@
 					        </li>
 					        <li class="nav-item active">
 						        <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server">
-                                    Items
+                                    Welcome
 						        </asp:LinkButton>
 					        </li>
 				        </ul>
