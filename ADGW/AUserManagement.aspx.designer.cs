@@ -24,13 +24,13 @@ namespace ADGW
         protected global::System.Web.UI.WebControls.TextBox TxtuserID;
 
         /// <summary>
-        /// Button1 control.
+        /// gobtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button gobtn;
 
         /// <summary>
         /// txtusername control.
@@ -87,39 +87,48 @@ namespace ADGW
         protected global::System.Web.UI.WebControls.TextBox txtpswd;
 
         /// <summary>
-        /// Button2 control.
+        /// addBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button addBtn;
 
         /// <summary>
-        /// Button3 control.
+        /// updateBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button updateBtn;
 
         /// <summary>
-        /// Button4 control.
+        /// delBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button delBtn;
 
         /// <summary>
-        /// GridView1 control.
+        /// GETDATAFROMSQL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.SqlDataSource GETDATAFROMSQL;
+
+        /// <summary>
+        /// userData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView userData;
     }
 }
