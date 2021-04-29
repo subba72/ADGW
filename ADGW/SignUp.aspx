@@ -10,7 +10,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/user.png"/>
+                           s<img width="100px" src="imgs/user.png"/>
                         </center>
                      </div>
                   </div>
@@ -87,19 +87,13 @@
                      <div class="col-md-4">
                         <label>User ID</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="User ID" ReadOnly="True"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox8" runat="server" placeholder="User ID" ReadOnly="True" Enabled="False" Width="631px"></asp:TextBox>
                         </div>
                      </div>
                      <div class="col-md-4">
-                        <label>Old Password</label>
+                         <label>&nbsp;Password</label>
                         <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox9" runat="server" placeholder="Email ID" TextMode="Password" ReadOnly="True"></asp:TextBox>
-                        </div>
-                     </div>
-                     <div class="col-md-4">
-                        <label>New Password</label>
-                        <div class="form-group">
-                           <asp:TextBox class="form-control" ID="TextBox10" runat="server" placeholder="Email ID" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox class="form-control" ID="TextBox10" runat="server" placeholder="password" TextMode="Password"></asp:TextBox>
                         </div>
                      </div>
                   </div>
@@ -122,8 +116,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="imgs/books1.png"/>
-                        </center>
+                           &nbsp;</center>
                      </div>
                   </div>
                   <div class="row">

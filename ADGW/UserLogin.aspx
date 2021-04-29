@@ -18,7 +18,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <h3>Member Login</h3>
+                           <h3>User Login</h3>
                         </center>
                      </div>
                   </div>
@@ -29,24 +29,31 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <label>Member ID</label>
+                         <label>User ID</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Member ID"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="userIDTxt" runat="server" placeholder="user ID"></asp:TextBox>
                         </div>
                         <label>Password</label>
                         <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox CssClass="form-control" ID="UserPswdTxt" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                         </div>
                            
                         <div class="d-grid gap-2 col-6 mx-auto">
-                          <button class="btn btn-success" type="button">Login</button>
-                          <button class="btn btn-primary" type="button">Sign Up</button>
+                           <div class="col-4">
+                                <asp:Button ID="Button2" class="btn btn-lg btn-block btn-success" runat="server" Text="Login" OnClick="Button2_Click"   />
+                            </div>
+                            <%--  <div class="col-4">
+                                <asp:Button ID="Button1" class="btn btn-lg btn-block btn-success" runat="server" Text="Add" OnClick="Button2_Click" />
+                            </div>
+
+                          <button class="btn btn-primary" type="button">Sign Up</button>--%>
                         </div>
 
                     </div>
                 </div>
-                    <a href="Home.aspx"><< Back to Home</a><br><br>
+                   <!-- <a href="Home.aspx"><< Back to Home</a><br><br>
               <a href="AdminLogin.aspx"><< admin</a><br><br>
+                       -->
                 </div>
             </div>
              </div>

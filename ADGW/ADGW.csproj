@@ -107,8 +107,11 @@
     <Content Include="fontawesome\css\v4-shims.min.css" />
     <Content Include="imgs\femaleAdmin.png" />
     <Content Include="imgs\user.png" />
+    <Content Include="AMemberManagement.aspx" />
+    <Content Include="Items.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="UserLogin.aspx" />
+    <Content Include="AUserManagement.aspx" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -121,12 +124,26 @@
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Items.aspx.cs">
+      <DependentUpon>Items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Items.aspx.designer.cs">
+      <DependentUpon>Items.aspx</DependentUpon>
+    </Compile>
     <Compile Include="main.Master.cs">
       <DependentUpon>main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="main.Master.designer.cs">
       <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AMemberManagement.aspx.cs">
+      <DependentUpon>AMemberManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMemberManagement.aspx.designer.cs">
+      <DependentUpon>AMemberManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Home.aspx.cs">
@@ -136,6 +153,7 @@
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RouteConfig.cs" />
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,6 +167,13 @@
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AUserManagement.aspx.cs">
+      <DependentUpon>AUserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AUserManagement.aspx.designer.cs">
+      <DependentUpon>AUserManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>

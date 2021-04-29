@@ -15,22 +15,22 @@ namespace ADGW
     {
 
         /// <summary>
-        /// TextBox1 control.
+        /// userNameTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox userNameTxt;
 
         /// <summary>
-        /// TextBox2 control.
+        /// pswdTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox pswdTxt;
 
         /// <summary>
         /// Button1 control.
