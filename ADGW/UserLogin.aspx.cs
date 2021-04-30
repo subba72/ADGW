@@ -40,7 +40,7 @@ namespace ADGW
                         Session["role"] = "employee";
 
                     }
-                    Response.Redirect("Home.aspx");
+                    Response.Redirect("Items.aspx");
                 }
                 else
                 {

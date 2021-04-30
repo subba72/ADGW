@@ -136,7 +136,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <asp:SqlDataSource ID="custDatasql" runat="server" ConnectionString="<%$ ConnectionStrings:grocerydbConnectionString %>" SelectCommand="SELECT * FROM [customer]"></asp:SqlDataSource>
+                                <asp:SqlDataSource ID="custDatasql" runat="server" ConnectionString="<%$ ConnectionStrings:grocerydbConnectionString %>" SelectCommand="SELECT [cust_id], [name], [address], [email], [phone], [customer_type] FROM [customer]"></asp:SqlDataSource>
                                 <hr>
                             </div>
                         </div>
@@ -152,7 +152,6 @@
                                         <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                                         <asp:BoundField DataField="phone" HeaderText="phone" SortExpression="phone" />
                                         <asp:BoundField DataField="customer_type" HeaderText="customer_type" SortExpression="customer_type" />
-                                        <asp:BoundField DataField="user_Id" HeaderText="user_Id" SortExpression="user_Id" />
                                     </Columns>
                                     <EditRowStyle BackColor="#999999" />
                                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
