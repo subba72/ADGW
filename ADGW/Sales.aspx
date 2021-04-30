@@ -1,5 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/main.Master" AutoEventWireup="true" CodeBehind="Sales.aspx.cs" Inherits="ADGW.Sales" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-clip: padding-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: .25rem;
+            transition: none;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -73,7 +90,7 @@
                         <div class="form-group">
                            <div class="input-group">
                                
-                             <asp:Button class="btn btn-primary" ID="searchItem" runat="server" Text="search" Height="25px" Width="40px" CssClass="auto-style5" OnClick="searchItem_Click"    />
+                             <asp:Button class="btn btn-primary" ID="searchItem" runat="server" Text="search" Height="25px" Width="49px" CssClass="auto-style5" OnClick="searchItem_Click"    />
                       
                               <asp:TextBox CssClass="auto-style3" ID="txtItemID" runat="server" placeholder="Item Name" Width="254px"></asp:TextBox>
                                
@@ -104,7 +121,7 @@
                         <label>Price</label>
                         <div class="form-group">
                            <div class="auto-style4">
-                              <asp:TextBox CssClass="form-control" ID="txtPrice" runat="server" placeholder="price $"></asp:TextBox>
+                              <asp:TextBox CssClass="auto-style1" ID="txtPrice" runat="server" placeholder="price $" Width="254px"></asp:TextBox>
                                
                            </div>
                         </div>

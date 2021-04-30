@@ -228,7 +228,7 @@ namespace ADGW
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("DELETE FROM items WHERE _id=@id", con);
+                SqlCommand cmd = new SqlCommand("DELETE FROM items WHERE id=@id", con);
 
                 cmd.Parameters.AddWithValue("@id", txtitemID.Text.Trim());
 
