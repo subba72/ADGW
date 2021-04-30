@@ -92,8 +92,6 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="Category.aspx" />
     <Content Include="css\custome.css" />
-    <Content Include="datatables\css\jquery.dataTables.min.css" />
-    <Content Include="datatables\js\jquery.dataTables.min.js" />
     <Content Include="fontawesome\css\all.css" />
     <Content Include="fontawesome\css\all.min.css" />
     <Content Include="fontawesome\css\brands.css" />
@@ -115,12 +113,12 @@
     <Content Include="Sales.aspx" />
     <Content Include="Setting.aspx" />
     <Content Include="SignUp.aspx" />
+    <Content Include="Stock.aspx" />
     <Content Include="Supplier.aspx" />
     <Content Include="UserLogin.aspx" />
     <Content Include="AUserManagement.aspx" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
-    <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminLogin.aspx.cs">
@@ -188,6 +186,13 @@
     <Compile Include="SignUp.aspx.designer.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Stock.aspx.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock.aspx.designer.cs">
+      <DependentUpon>Stock.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.aspx.cs">
       <DependentUpon>Supplier.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,13 +213,6 @@
     </Compile>
     <Compile Include="AUserManagement.aspx.designer.cs">
       <DependentUpon>AUserManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

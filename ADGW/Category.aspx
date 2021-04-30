@@ -25,7 +25,7 @@
                      <div class="col">
                         <asp:GridView class="table table-striped table-bordered" ID="catGridView" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="category_id" DataSourceID="catSqlDat">
                             <Columns>
-                                <asp:BoundField DataField="category_id" HeaderText="category_id" ReadOnly="True" SortExpression="category_id" />
+                                <asp:BoundField DataField="category_id" HeaderText="CODE" ReadOnly="True" SortExpression="category_id" />
                                 <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                             </Columns>
                             <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />

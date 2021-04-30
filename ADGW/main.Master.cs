@@ -26,6 +26,7 @@ namespace ADGW
                     categoryBtn.Visible = false;
                     salesBtn.Visible = false;
                     settingBtn.Visible = false;
+                    stockBtn.Visible = false;
                 }
                 else if (Session["role"].Equals("employee"))
                 {
@@ -41,6 +42,7 @@ namespace ADGW
                     categoryBtn.Visible = true;
                     salesBtn.Visible = true;
                     settingBtn.Visible = true;
+                    stockBtn.Visible = true;
                 }
                 else if (Session["role"].Equals("admin"))
                 {
@@ -56,6 +58,7 @@ namespace ADGW
                     categoryBtn.Visible = true;
                     salesBtn.Visible = true;
                     settingBtn.Visible = false;
+                    stockBtn.Visible = true;
                 }
 
             }
@@ -108,6 +111,7 @@ namespace ADGW
             membmgmtBtm.Visible = false; //for employee and admin= false when no body is login  
             salesBtn.Visible = false;
             settingBtn.Visible = false;
+            stockBtn.Visible = false;
             Response.Redirect("UserLogin.aspx");
         }
 
@@ -139,6 +143,11 @@ namespace ADGW
         protected void settingBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Setting.aspx");
+        }
+
+        protected void stockBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Stock.aspx");
         }
     }
 }

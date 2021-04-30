@@ -132,7 +132,7 @@ namespace ADGW
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('User added successfully');</script>");
+                Response.Write("<script>alert('Items added successfully');</script>");
                 //filedClear();
                 itemGrid.DataBind();
             }
@@ -201,9 +201,9 @@ namespace ADGW
         }
         protected void delBtn_Click(object sender, EventArgs e)
         {
-            if (checkEmptyFields())
+            if (String.IsNullOrEmpty(txtitemID.Text))
             {
-                Response.Write("<script>alert('One or more Fields are empty');</script>");
+                Response.Write("<script>alert('Input ID is Empty');</script>");
             }
             else
             {

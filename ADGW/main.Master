@@ -97,6 +97,11 @@
                                     Inventory
 						        </asp:LinkButton>
 					        </li>
+							 <li class="nav-item active">
+						        <asp:LinkButton class="nav-link" ID="stockBtn" runat="server" OnClick="stockBtn_Click"  >
+                                    Stock
+						        </asp:LinkButton>
+					        </li>
 					        <li class="nav-item active">
 						        <asp:LinkButton class="nav-link" ID="membmgmtBtm" runat="server" OnClick="LinkButton2_Click">
                                     Member Management
@@ -108,7 +113,7 @@
 						        </asp:LinkButton>
 					        </li>
 							<li class="nav-item active">
-						        <asp:LinkButton class="nav-link" ID="salesBtn" runat="server"  >
+						        <asp:LinkButton class="nav-link" ID="salesBtn" runat="server" OnClick=" salesBtn_Click"  >
                                     Sales
 						        </asp:LinkButton>
 					        </li>

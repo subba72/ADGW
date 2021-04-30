@@ -11,133 +11,97 @@ namespace ADGW
 {
 
 
-    public partial class Sales
+    public partial class Stock
     {
 
         /// <summary>
-        /// catSqlDat control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource catSqlDat;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// saleSqlDat control.
+        /// ItemlistData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource saleSqlDat;
+        protected global::System.Web.UI.WebControls.DropDownList ItemlistData;
 
         /// <summary>
-        /// itemGrid control.
+        /// itemlist control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView itemGrid;
+        protected global::System.Web.UI.WebControls.SqlDataSource itemlist;
 
         /// <summary>
-        /// txtSaleID control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSaleID;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// saleLoad control.
+        /// displayItemdetailsql control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button saleLoad;
+        protected global::System.Web.UI.WebControls.SqlDataSource displayItemdetailsql;
 
         /// <summary>
-        /// searchItem control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button searchItem;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// txtItemID control.
+        /// catDrop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtItemID;
+        protected global::System.Web.UI.WebControls.DropDownList catDrop;
 
         /// <summary>
-        /// itemsearchRsult control.
+        /// categoryDat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView itemsearchRsult;
+        protected global::System.Web.UI.WebControls.SqlDataSource categoryDat;
 
         /// <summary>
-        /// txtSaleQuantity control.
+        /// catCOunt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSaleQuantity;
+        protected global::System.Web.UI.WebControls.SqlDataSource catCOunt;
 
         /// <summary>
-        /// txtSaleTotal control.
+        /// GridView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSaleTotal;
-
-        /// <summary>
-        /// txtPrice control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice;
-
-        /// <summary>
-        /// saleAddBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button saleAddBtn;
-
-        /// <summary>
-        /// saleUpdateBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button saleUpdateBtn;
-
-        /// <summary>
-        /// saleDelBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button saleDelBtn;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
     }
 }

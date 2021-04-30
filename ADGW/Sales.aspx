@@ -41,7 +41,7 @@
             </div>
          </div>
       <div class="row"   >
-         <div class="col-md-8">
+         <div class="col-md-11">
             <div class="card">
                <div class="card-body">
                   <div class="row">
@@ -69,11 +69,17 @@
                             </div>
                      </div>
                      <div class="col-md-5">
-                        <label>Item ID</label>
+                        <label>Search Item ID</label>
                         <div class="form-group">
                            <div class="input-group">
+                               
+                             <asp:Button class="btn btn-primary" ID="searchItem" runat="server" Text="search" Height="25px" Width="40px" CssClass="auto-style5" OnClick="searchItem_Click"    />
+                      
                               <asp:TextBox CssClass="auto-style3" ID="txtItemID" runat="server" placeholder="Item Name" Width="254px"></asp:TextBox>
                                
+                               <asp:GridView ID="itemsearchRsult" runat="server">
+                               </asp:GridView>
+                      
                            </div>
                         </div>
                      </div>
