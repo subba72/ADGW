@@ -22,6 +22,10 @@ namespace ADGW
                     inventoryBtn.Visible = false;
                     usrMgmtbtn.Visible = false; //only for admin
                     membmgmtBtm.Visible = false; //for employee and admin= false when no body is login  
+                    supplierBtn.Visible = false;
+                    categoryBtn.Visible = false;
+                    salesBtn.Visible = false;
+                    settingBtn.Visible = false;
                 }
                 else if (Session["role"].Equals("employee"))
                 {
@@ -33,6 +37,10 @@ namespace ADGW
                     membmgmtBtm.Visible = true;
                     adminLoginBtn.Visible = false;
                     loginBtn.Visible = false;
+                    supplierBtn.Visible = true;
+                    categoryBtn.Visible = true;
+                    salesBtn.Visible = true;
+                    settingBtn.Visible = true;
                 }
                 else if (Session["role"].Equals("admin"))
                 {
@@ -44,6 +52,10 @@ namespace ADGW
                     membmgmtBtm.Visible = true;
                     loginBtn.Visible = false;
                     adminLoginBtn.Visible = false;
+                    supplierBtn.Visible = true;
+                    categoryBtn.Visible = true;
+                    salesBtn.Visible = true;
+                    settingBtn.Visible = false;
                 }
 
             }
@@ -87,11 +99,15 @@ namespace ADGW
 
             loginBtn.Visible = true;
             logoutBtn.Visible = false;
+            supplierBtn.Visible = false;
+            categoryBtn.Visible = false;
             welcomeBtn.Visible = false;
             membmgmtBtm.Visible = false;
             inventoryBtn.Visible = false;
             usrMgmtbtn.Visible = false; //only for admin
             membmgmtBtm.Visible = false; //for employee and admin= false when no body is login  
+            salesBtn.Visible = false;
+            settingBtn.Visible = false;
             Response.Redirect("UserLogin.aspx");
         }
 
@@ -103,6 +119,26 @@ namespace ADGW
         protected void adminLoginBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminLogin.aspx");
+        }
+
+        protected void supplier_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Supplier.aspx");
+        }
+
+        protected void categoryBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Category.aspx");
+        }
+
+        protected void salesBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Sales.aspx");
+        }
+
+        protected void settingBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Setting.aspx");
         }
     }
 }

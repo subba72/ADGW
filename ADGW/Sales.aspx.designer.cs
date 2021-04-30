@@ -11,133 +11,115 @@ namespace ADGW
 {
 
 
-    public partial class main
+    public partial class Sales
     {
 
         /// <summary>
-        /// head control.
+        /// catSqlDat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.SqlDataSource catSqlDat;
 
         /// <summary>
-        /// form1 control.
+        /// saleSqlDat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.SqlDataSource saleSqlDat;
 
         /// <summary>
-        /// welcomeBtn control.
+        /// itemGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton welcomeBtn;
+        protected global::System.Web.UI.WebControls.GridView itemGrid;
 
         /// <summary>
-        /// categoryBtn control.
+        /// txtSaleID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton categoryBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtSaleID;
 
         /// <summary>
-        /// supplierBtn control.
+        /// saleLoad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton supplierBtn;
+        protected global::System.Web.UI.WebControls.Button saleLoad;
 
         /// <summary>
-        /// inventoryBtn control.
+        /// txtItemID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton inventoryBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtItemID;
 
         /// <summary>
-        /// membmgmtBtm control.
+        /// txtSaleQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton membmgmtBtm;
+        protected global::System.Web.UI.WebControls.TextBox txtSaleQuantity;
 
         /// <summary>
-        /// usrMgmtbtn control.
+        /// txtSaleTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton usrMgmtbtn;
+        protected global::System.Web.UI.WebControls.TextBox txtSaleTotal;
 
         /// <summary>
-        /// salesBtn control.
+        /// txtPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton salesBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtPrice;
 
         /// <summary>
-        /// settingBtn control.
+        /// saleAddBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton settingBtn;
+        protected global::System.Web.UI.WebControls.Button saleAddBtn;
 
         /// <summary>
-        /// loginBtn control.
+        /// saleUpdateBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton loginBtn;
+        protected global::System.Web.UI.WebControls.Button saleUpdateBtn;
 
         /// <summary>
-        /// adminLoginBtn control.
+        /// saleDelBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton adminLoginBtn;
-
-        /// <summary>
-        /// logoutBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton logoutBtn;
-
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button saleDelBtn;
     }
 }

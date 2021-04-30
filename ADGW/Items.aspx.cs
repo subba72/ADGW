@@ -15,8 +15,78 @@ namespace ADGW
         string connection = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            catGridView.DataBind();
+            
             itemGrid.DataBind();
+            
+        }
+
+
+        protected void itemLoad_Click(object sender, EventArgs e)
+        {
+            if (itemIdExist())
+            {
+                getItemUpdateData();
+
+            }
+            else
+            {
+                Response.Write("<script>alert('Item Id does not exits, provide unique Item id');</script>");
+            }
+        }
+        void getItemUpdateData()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(connection);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT * from items where id='" + txtitemID.Text.Trim() + "'", con);
+
+                SqlDataAdapter adpter = new SqlDataAdapter(cmd);
+
+                DataTable datab = new DataTable();
+                adpter.Fill(datab);
+
+                if (datab.Rows.Count > 0)
+                {
+
+                    txtitemID.Text = datab.Rows[0][0].ToString();
+
+                    txtItemName.Text = datab.Rows[0][1].ToString();
+
+                    txtItemQuantity.Text = datab.Rows[0][2].ToString();
+                    txtPrice.Text = datab.Rows[0][4].ToString();
+                    txtDescr.Text = datab.Rows[0][3].ToString();
+                    txtMdate.Text = datab.Rows[0][6].ToString();
+                    txtEDate.Text = datab.Rows[0][7].ToString();
+                    TxtPDate.Text = datab.Rows[0][5].ToString();
+                }
+
+                else
+                {
+                    Response.Write("<script>alert('Invilad ID);</script>");
+                }
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
+        void filedClear()
+        {
+            txtitemID.Text = "";
+            txtItemName.Text = "";
+            TxtPDate.Text = "";
+            txtDescr.Text = "";
+            txtEDate.Text = "";
+            txtMdate.Text = "";
+            txtItemQuantity.Text = "";
+            txtPrice.Text = "";
         }
 
         protected void addBtn_Click(object sender, EventArgs e)
@@ -120,7 +190,7 @@ namespace ADGW
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script>alert('Member Update Successful.');</script>");
+                Response.Write("<script>alert('Item Update Successful.');</script>");
                 filedClear();
                 itemGrid.DataBind();
             }
@@ -167,67 +237,12 @@ namespace ADGW
                 con.Close();
                 Response.Write("<script>alert('Item Delete Successful.');</script>");
                 filedClear();
-                catGridView.DataBind();
+                itemGrid.DataBind();
             }
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
-        }
-
-        protected void catAddBtn_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(catIdTxt.Text) ||
-                String.IsNullOrEmpty(catNameTxt.Text)  )
-            {
-                Response.Write("<script>alert('One or more field is empty');</script>");
-            }
-            else
-            {
-                if (categoryIdExist())
-                {
-                    Response.Write("<script>alert('Category Id exits, provide unique Category id');</script>");
-                }
-                else
-                {
-                    addCategory();
-                }
-               
-            }
-        }
-        bool categoryIdExist()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(connection);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = new SqlCommand("SELECT * from category where category_id='" + catIdTxt.Text.Trim() + "'", con);
-
-                SqlDataAdapter adpter = new SqlDataAdapter(cmd);
-
-                DataTable datab = new DataTable();
-                adpter.Fill(datab);
-
-                if (datab.Rows.Count > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-                con.Close();
-                //Response.Write("<script>alert('Sign Up Successful. Go to User Login to Login');</script>");
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-                return false;
-            }
-
         }
         bool itemIdExist()
         {
@@ -263,41 +278,13 @@ namespace ADGW
             }
 
         }
-
-        void addCategory()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(connection);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = new SqlCommand("INSERT INTO category (category_id, name) VALUES(@cat_id, @cat_name )", con);
-
-                cmd.Parameters.AddWithValue("@cat_id", catIdTxt.Text.Trim());
-                cmd.Parameters.AddWithValue("@cat_name", catNameTxt.Text.Trim());
-                
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Response.Write("<script>alert('Category added successfully');</script>");
-                catIdTxt.Text = "";
-                catNameTxt.Text = "";
-                catGridView.DataBind();
-                
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-            }
-        }
         bool checkEmptyFields()
         {
             if (String.IsNullOrEmpty(txtitemID.Text) ||
                String.IsNullOrEmpty(txtItemName.Text) ||
                String.IsNullOrEmpty(TxtPDate.Text) ||
                String.IsNullOrEmpty(txtEDate.Text) ||
-               String.IsNullOrEmpty(txtMdate.Text)||
+               String.IsNullOrEmpty(txtMdate.Text) ||
                 String.IsNullOrEmpty(txtPrice.Text) ||
                String.IsNullOrEmpty(txtDescr.Text) ||
                String.IsNullOrEmpty(txtItemQuantity.Text))
@@ -307,203 +294,6 @@ namespace ADGW
             return false;
         }
 
-        protected void loadCategory_Click(object sender, EventArgs e)
-        {
-            if (catIdExist())
-            {
-                getCatUpdateData();
 
-            }
-            else
-            {
-                Response.Write("<script>alert('Category Id does not exits, provide unique Category id');</script>");
-            }
-
-        }
-        void getCatUpdateData()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(connection);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = new SqlCommand("SELECT * from category where category_id='" + catIdTxt.Text.Trim() + "'", con);
-
-                SqlDataAdapter adpter = new SqlDataAdapter(cmd);
-
-                DataTable datab = new DataTable();
-                adpter.Fill(datab);
-
-                if (datab.Rows.Count > 0)
-                {
-
-                    catIdTxt.Text = datab.Rows[0][0].ToString();
-
-                    catNameTxt.Text = datab.Rows[0][1].ToString();
-                }
-
-                else
-                {
-                    Response.Write("<script>alert('Invilad ID);</script>");
-                }
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-
-            }
-        }
-        bool catIdExist()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(connection);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = new SqlCommand("SELECT * from category where category_id='" + catIdTxt.Text.Trim() + "'", con);
-
-                SqlDataAdapter adpter = new SqlDataAdapter(cmd);
-
-                DataTable datab = new DataTable();
-                adpter.Fill(datab);
-
-                if (datab.Rows.Count > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-                con.Close();
-                Response.Write("<script>alert('category updated Successful ');</script>");
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-                return false;
-            }
-        }
-
-        protected void itemLoad_Click(object sender, EventArgs e)
-        {
-            if (itemIdExist())
-            {
-                getItemUpdateData();
-
-            }
-            else
-            {
-                Response.Write("<script>alert('Item Id does not exits, provide unique Item id');</script>");
-            }
-        }
-        void getItemUpdateData()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(connection);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = new SqlCommand("SELECT * from items where id='" + txtitemID.Text.Trim() + "'", con);
-
-                SqlDataAdapter adpter = new SqlDataAdapter(cmd);
-
-                DataTable datab = new DataTable();
-                adpter.Fill(datab);
-
-                if (datab.Rows.Count > 0)
-                {
-
-                    txtitemID.Text = datab.Rows[0][0].ToString();
-
-                    txtItemName.Text = datab.Rows[0][1].ToString();
-                  
-                    txtItemQuantity.Text = datab.Rows[0][2].ToString();
-                    txtPrice.Text = datab.Rows[0][4].ToString();
-                    txtDescr.Text = datab.Rows[0][3].ToString();
-                    txtMdate.Text = datab.Rows[0][6].ToString();
-                    txtEDate.Text = datab.Rows[0][7].ToString();
-                    TxtPDate.Text = datab.Rows[0][5].ToString();
-                }
-
-                else
-                {
-                    Response.Write("<script>alert('Invilad ID);</script>");
-                }
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-
-            }
-        }
-        void filedClear()
-        {
-            txtitemID.Text = "";
-            txtItemName.Text = "";
-            TxtPDate.Text = "";
-            txtDescr.Text = "";
-            txtEDate.Text = "";
-            txtMdate.Text = "";
-            txtItemQuantity.Text = "";
-            txtPrice.Text = "";
-        }
-
-        protected void catDelBtn_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(catIdTxt.Text) ||
-                String.IsNullOrEmpty(catNameTxt.Text))
-            {
-                Response.Write("<script>alert('One or more Fields are empty');</script>");
-            }
-            else
-            {
-                if (catIdExist())
-                {
-                    deleteCategory();
-
-                }
-                else
-                {
-                    //addUser();
-                    Response.Write("<script>alert('Category Id does not exist, provide unique catogery id');</script>");
-                }
-            }
-        }
-        void deleteCategory()
-        {
-            try
-            {
-                SqlConnection con = new SqlConnection(connection);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = new SqlCommand("DELETE FROM category WHERE category_id=@id", con);
-
-                cmd.Parameters.AddWithValue("@id", catIdTxt.Text.Trim());
-
-
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Response.Write("<script>alert('Item Delete Successful.');</script>");
-                filedClear();
-                catGridView.DataBind();
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-            }
-        }
     }
 }

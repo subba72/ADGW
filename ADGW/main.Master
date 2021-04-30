@@ -82,6 +82,16 @@
                                     Welcome
 						        </asp:LinkButton>
 					        </li>
+							 <li class="nav-item active">
+						        <asp:LinkButton class="nav-link" ID="categoryBtn" runat="server" OnClick="categoryBtn_Click"  >
+                                    Category
+						        </asp:LinkButton>
+					        </li>
+							 <li class="nav-item active">
+						        <asp:LinkButton class="nav-link" ID="supplierBtn" runat="server" OnClick="supplier_Click"  >
+                                    Supplier
+						        </asp:LinkButton>
+					        </li>
 					        <li class="nav-item active">
 						        <asp:LinkButton class="nav-link" ID="inventoryBtn" runat="server" OnClick="LinkButton1_Click">
                                     Inventory
@@ -93,11 +103,20 @@
 						        </asp:LinkButton>
 					        </li>
 					        <li class="nav-item active">
-						        <asp:LinkButton class="nav-link" ID="usrMgmtbtn" runat="server" OnClick="LinkButton3_Click" Visible="False">
+						        <asp:LinkButton class="nav-link" ID="usrMgmtbtn" runat="server" OnClick="LinkButton3_Click" Visible="False" >
                                     User Management
 						        </asp:LinkButton>
 					        </li>
-                   
+							<li class="nav-item active">
+						        <asp:LinkButton class="nav-link" ID="salesBtn" runat="server"  >
+                                    Sales
+						        </asp:LinkButton>
+					        </li>
+							<li class="nav-item active">
+						        <asp:LinkButton class="nav-link" ID="settingBtn" runat="server" OnClick="settingBtn_Click"  >
+                                    Setting
+						        </asp:LinkButton>
+					        </li>
                             <li class="nav-item active">
 						       <asp:LinkButton class="nav-link" ID="loginBtn" runat="server" OnClick="LinkButton7_Click">
                                    User Login
